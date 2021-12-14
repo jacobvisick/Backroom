@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tests.jvisick.backroom.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button android:id="@+id/rapid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rapid"/>
+
+    <Button android:id="@+id/furniture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/furniture"/>
+
+    <Button android:id="@+id/lamps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lamps"/>
+
+    <Button android:id="@+id/wall_dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wall_dec"/>
+
+    <Button android:id="@+id/rapid_days"
+        android:text="View saved days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Backroom</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="rapid">Rapid Processing</string>
+    <string name="bulk">Bulk Processing</string>
+    <string name="furniture">Furniture</string>
+    <string name="lamps">Lamps</string>
+    <string name="wall_dec">Wall Art</string>
+
+    <string name="calculate_actual">Actual performance</string>
+    <string name="calculate_goal">Performance goal</string>
+    <string name="clear_form">Clear form</string>
+
+    <string name="associate_count">Number of associates: </string>
+    <string name="time_start">Start time: </string>
+    <string name="time_end">Stop time: </string>
+    <string name="total_time">Hours processed: </string>
+    <string name="labor_hours">Total labor hours: </string>
+    <string name="cartons">Cartons Processed: </string>
+    <string name="cph">Cartons per hour: </string>
+
+
+    <string name="associate_name">Associate name: </string>
+    <!-- time_start -->
+    <!-- time_end -->
+    <string name="minutes_processed">Minutes processed: </string>
+    <string name="units_processed">Units processed: </string>
+    <string name="minutes_per_unit">Minutes per unit: </string>
+</resources>

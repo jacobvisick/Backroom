@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tests.jvisick.backroom.BulkActivity"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save_24dp"
+        app:elevation="4dp"
+        app:borderWidth="0dp"
+        android:layout_margin="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/bulk"
+        android:id="@+id/bulk_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bulk_title"
+        android:layout_centerHorizontal="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/associate_name"/>
+
+            <EditText
+                android:id="@+id/associate_name"
+                android:inputType="textPersonName"
+                android:hint="Unknown"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/time_start"/>
+
+            <EditText
+                android:id="@+id/time_start_bulk"
+                android:inputType="time"
+                android:hint="0:00"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/time_end"/>
+
+            <EditText
+                android:id="@+id/time_end"
+                android:inputType="time"
+                android:hint="0:00"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/minutes_processed" />
+
+            <EditText
+                android:id="@+id/total_time"
+                android:text="0"
+                android:layout_weight="1"
+                android:focusable="false"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/units_processed"
+                android:id="@+id/units_processed_tv"/>
+
+            <EditText
+                android:id="@+id/units_processed"
+                android:inputType="number"
+                android:hint="0"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/minutes_per_unit"/>
+
+            <EditText
+                android:id="@+id/minutes_per_unit"
+                android:text="0.00"
+                android:layout_weight="1"
+                android:focusable="false"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/calculate_actual"
+                android:id="@+id/calculate_actual"
+                android:layout_span="2"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/calculate_goal"
+                android:id="@+id/calculate_goal"
+                android:layout_span="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="@string/clear_form"
+                android:id="@+id/clear_form"
+                android:layout_span="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>
