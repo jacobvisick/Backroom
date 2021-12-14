@@ -1,28 +1,41 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    compileSdkVersion 31
+    //buildToolsVersion '29.0.3'
 
     defaultConfig {
         applicationId "tests.jvisick.backroom"
-        minSdkVersion 23
-        targetSdkVersion 23
+        minSdkVersion 28
+        targetSdkVersion 31
         versionCode 1
         versionName "1.1"
+        multiDexEnabled true
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
+    
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard= file('multidex-config.pro')
         }
+    }
+
+    realm {
+        syncEnabled = true
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.android.support:design:23.2.0'
-    compile 'io.realm:realm-android:0.87.5'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.startup:startup-runtime:1.1.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'io.realm:android-adapters:3.1.0'
 }

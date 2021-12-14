@@ -1,14 +1,12 @@
 package tests.jvisick.backroom;
 
-import android.support.annotation.WorkerThread;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.WorkerThread;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import io.realm.DynamicRealm;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.RealmMigration;
 import io.realm.RealmResults;
 import tests.jvisick.backroom.BackroomObjects.RapidDay;
 
@@ -22,7 +20,8 @@ public class RapidDays extends AppCompatActivity {
         setContentView(R.layout.activity_rapid_days);
 
         // Set up realm
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this)
+        Realm.init(getApplicationContext());
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
                 .schemaVersion(1)
                 .deleteRealmIfMigrationNeeded()
                 .build();

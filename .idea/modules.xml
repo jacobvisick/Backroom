@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Backroom.iml" filepath="$PROJECT_DIR$/Backroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backroom.iml" filepath="$PROJECT_DIR$/.idea/modules/Backroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Backroom.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Backroom.app.iml" />
     </modules>
   </component>
 </project>

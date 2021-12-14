@@ -1,13 +1,11 @@
 package tests.jvisick.backroom;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,7 +20,6 @@ import io.realm.RealmList;
 import io.realm.RealmResults;
 import tests.jvisick.backroom.BackroomObjects.BulkDay;
 import tests.jvisick.backroom.BackroomObjects.BulkPerson;
-import tests.jvisick.backroom.BackroomObjects.RapidDay;
 
 public class BulkActivity extends AppCompatActivity {
     private String mProcessingType;
@@ -120,7 +117,8 @@ public class BulkActivity extends AppCompatActivity {
 
 
         // Set up Realm
-        realmConfig = new RealmConfiguration.Builder(this)
+        Realm.init(getApplicationContext());
+        realmConfig = new RealmConfiguration.Builder()
                 .schemaVersion(1)
                 .deleteRealmIfMigrationNeeded()
                 .build();

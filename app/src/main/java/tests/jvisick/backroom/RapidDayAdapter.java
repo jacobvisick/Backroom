@@ -1,11 +1,15 @@
 package tests.jvisick.backroom;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import java.util.zip.Inflater;
+
+import io.realm.OrderedRealmCollection;
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
 import tests.jvisick.backroom.BackroomObjects.RapidDay;
@@ -15,12 +19,17 @@ import tests.jvisick.backroom.BackroomObjects.RapidDay;
  */
 public class RapidDayAdapter extends RealmBaseAdapter<RapidDay> implements ListAdapter {
 
+    OrderedRealmCollection<RapidDay> results;
+    LayoutInflater inflater;
+
     private static class ViewHolder {
         TextView rapidDay;
     }
 
-    public RapidDayAdapter(Context context, int resId, RealmResults<RapidDay> realmResults, boolean automaticUpdate) {
-        super(context, realmResults, automaticUpdate);
+    public RapidDayAdapter(Context context, int resId, OrderedRealmCollection<RapidDay> realmResults, boolean automaticUpdate) {
+        super(realmResults);
+        results = realmResults;
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -35,12 +44,12 @@ public class RapidDayAdapter extends RealmBaseAdapter<RapidDay> implements ListA
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        RapidDay item = realmResults.get(position);
+        RapidDay item = results.get(position);
         viewHolder.rapidDay.setText(item.getDate());
         return convertView;
     }
 
-    public RealmResults<RapidDay> getRealmResults() {
-        return realmResults;
+    public OrderedRealmCollection<RapidDay> getRealmResults() {
+        return results;
     }
 }
