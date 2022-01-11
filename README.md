@@ -36,6 +36,7 @@ Below is a screenshot of the calculator for "rapid processing" - the processing 
     - hours spent processing
     - total labor/payroll hours
     - CPH/cartons processed per labor hour
+    
   Each of the fields on this screen are numbers which were reported regularly and allowed me to save the time I usually spent calculating
   these numbers at the end of the day. Instead of grabbing a calculator and scratch paper and calculating each step of the way, I was 
   able to simply enter the data and fill out my chart.
